@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+pedidos de importação
+my_domain = 'RUBYANNJP.pythonanywhere.com'
+nome de usuário = 'RUBYANNJP'
+token = 'a777657cc4b970075d8904a23365635e58a68a33'
+
+response = requests.post (
+    'https://www.pythonanywhere.com/api/v0/user/ {username} / webapps / {domínio} /reload/'.format (
+        nome de usuário = nome de usuário, domínio = meu_dominio
+    )
+    headers = {'Authorization': 'Token {token}'. format (token = token)}
+)
+se response.status_code == 200:
+    print ('Tudo OK')
+outro:
+    print ('Obtido código de status inesperado {}: {! r}'. format (response.status_code, response.content))
+                          
